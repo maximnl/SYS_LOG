@@ -12,6 +12,9 @@ GO
 -- [data] will keep anything , messages, parameters. there is [dbo].[A_FN_SYS_ErrorJson] function that you can use 
 -- to store data in json format
 -- [site_id] is for multisite/domains/business situations 
+-- duration of the stap
+-- result , state of the step
+
  CREATE TABLE [A_SYS_LOG](
 	[category] [varchar](50) NULL,
 	[session_id] [varchar](50) NULL,
@@ -20,6 +23,8 @@ GO
 	[log_date] [date] NULL,
 	[log_time] [datetime2](7) NULL,
 	[data] [varchar](4000) NULL,
-	[site_id] [int] NULL
+	[site_id] [int] NULL,
+	 duration real NULL ,
+	 result varchar(20)
 ) ON [PRIMARY]
 GO
